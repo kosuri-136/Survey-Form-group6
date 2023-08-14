@@ -110,15 +110,18 @@ button {
     padding: 20px;
 
   }
+ 
   label {
     color:#ffffff;
   }
   
-  input{
+  .form-group input{
     width: 280px;
     border: none;
     border-bottom: 1px solid #808080;
-    padding: 8px;
+    padding: 16px;
+    margin-left: 5px;
+
     
   }
   .btn button{
