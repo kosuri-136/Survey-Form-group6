@@ -1,0 +1,33 @@
+.sidebar {
+    margin-top: 0px;
+    width: 44px;
+    height: 100vh;
+    background-color: #278DF1;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    border: 1px solid  #278DF1;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 190px 10px 60px 5px;
+  }
+  
+  .home .preview {
+    cursor: pointer;
+  }
+  
+  li {
+    padding-left: 12px;
+    margin-top: 15px;
+    margin-left: -10px;
+    margin-right: -10px;
+    
+  }
+  
+  .active {
+    background-color: antiquewhite; /* Change this to the desired background color */
+    color: rgb(0, 157, 219); /* Keep the icon color white */
+  }
+  
