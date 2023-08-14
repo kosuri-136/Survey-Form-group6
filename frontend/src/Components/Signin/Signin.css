@@ -1,0 +1,135 @@
+*{
+  box-sizing: border-box;
+}
+  .abc{
+
+    background: linear-gradient(to bottom, white, #6ED4FF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    border: none;
+    /* margin: auto; */
+  }
+ 
+.main-continer .signin{
+    height: 390px;
+    width: 350px;
+    text-align: center;
+    background-color: #FFFFFF;
+    box-shadow: 19px  19px 19px 19px #c4c4c429;
+    border-radius: 34px;
+    padding-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 116px;
+    margin-right: 121px;
+    color: #393939;
+    padding-left: 10px;
+}
+
+
+  .main-continer{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:20px
+  }
+
+.heading1 .text1{
+    margin-top: 200px;
+    margin-left: 166px;
+    width: 417px;
+    height: 63px;
+    /* UI Properties */
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    letter-spacing: 0.47px;
+    color: #5C5C5C;
+    opacity: 1;
+}
+.heading1 .text2{
+    margin-top: 100px;
+    margin-left: 166px;
+    width: 417px;
+    height: 33px;
+    /* UI Properties */
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    letter-spacing: 0.47px;
+    color: #5C5C5C;
+    opacity: 1;
+    
+}
+.heading1 .text3{
+    margin-top: 20px;
+    margin-left: 166px;
+    width: 417px;
+    height: 23px;
+    /* UI Properties */
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    letter-spacing: 0.47px;
+    color: #5C5C5C;
+    opacity: 1;
+}
+
+button {
+    background-color: #278DF1;
+    color: #FFFFFF;
+    padding: 8px 16px 8px 16px;
+    border: none;
+    border-radius: 60px;
+    font-size: 18px;
+    cursor: pointer;
+    /* margin-left: 166px; */
+  }
+
+
+  
+  .head{
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 29px;
+
+}
+  .signin .text{
+
+    font-size: 20px;
+    color: #808080;
+    margin-top: 8px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 20px;
+
+  }
+ 
+  label {
+    color:#ffffff;
+  }
+  
+  .form-group input{
+    width: 280px;
+    border: none;
+    border-bottom: 1px solid #808080;
+    padding: 16px;
+    margin-left: 5px;
+
+    
+  }
+  .btn button{
+    border-radius: 60px;
+    align-items: center;
+    justify-content: center;
+  }
+  .register{
+    margin-left: 166px;
+    border-radius: 60px;
+  }
