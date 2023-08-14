@@ -8,8 +8,6 @@ const MongoClient = mongodb.MongoClient;
 const GridFsBucket = mongodb.GridFSBucket;
 const client = new MongoClient(process.env.DB_URL);
 const surveyModel = require('../model/surveymodel')
-const middleware = require('../middleware');
-
  
 const Storage = new GridFsStorage({
     url : process.env.DB_URL,
@@ -47,17 +45,7 @@ surveyRouter.post('/survey' , Upload.single("image") , async(req , res)=>{
         })
     }
 });
-
-
-
-
-// surveyRouter.get('/surveys/:email', authMiddleware, async (req, res) => {
-//   // Your code to fetch surveys here
-// });
-
-
-
-surveyRouter.get('/surveys/:email',middleware, async (req, res) => {
+surveyRouter.get('/surveys/:email', async (req, res) => {
   const email = req.params.email;
   try {
     const surveys = await surveyModel.find({ email: email });
