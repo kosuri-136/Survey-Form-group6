@@ -30,9 +30,9 @@ userRouter.post('/signup', async (req, res) => {
             password: hashedPassword, // Store the hashed password
         });
 
-        const result = await new_student.save();
+        await new_student.save(); // No need to store the result here
 
-        res.status(201).send(result, 'Successfully registered');
+        res.status(201).send('Successfully registered'); // Send only the success message
     } catch (err) {
         console.error(`Error inserting data: ${err.message}`);
         res.status(500).send('Internal Server Error');
@@ -54,7 +54,7 @@ userRouter.post('/signin', async (req, res) => {
 
             if (passwordMatch) {
                 const token = jwt.sign({ userId: user._id }, SECRETKEY); // Use userId as payload
-                res.status(202).send({ token });
+                res.status(201).send({ token });
             } else {
                 res.status(401).send('Incorrect Password');
             }
