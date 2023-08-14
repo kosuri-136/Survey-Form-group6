@@ -1,0 +1,194 @@
+#survey {
+  background-color: #f5f8fa;
+  padding: 30px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  margin: 19px 50px 0 150px;
+  width: 950px;
+}
+.heading-container{
+margin-top: -30px;
+margin-right: 90px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+h2 {
+  text-align: left;
+  margin-top: 20px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* .form-container {
+  display: flex;
+}
+ */
+
+ .form-container {
+  height: 300px;
+  display: flex;
+  margin-left: 20px;
+  /* margin-right: 120px; */
+  /* display: inline-flex; */
+  justify-content: space-between; /* Add this to evenly space between content */
+  align-items: flex-start; /* Align items to the top */
+}
+.left-side {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.right-side {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.form-field {
+  margin-bottom: 0px;
+  padding: 4px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(3, 3, 3);
+  font-weight: 100px;
+  /* margin-left: 100px; */
+}
+.form-field input{
+  margin-left: 0px;
+  height: 40px;
+  width: 270px;
+  border-radius: 5px;
+  border: 1px solid  #aeaeae;
+}
+.form-field select{
+  height: 30px;
+  border-radius: 0%;
+}
+.form-field .image{
+  height: 50px;
+}
+/* .button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2px;
+} */
+.button-container {
+  display: flex;
+  align-items: center; /* Align buttons vertically in the center */
+}
+
+
+.next-button {
+  padding: 6px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.cancel-button{
+  padding: 6px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  border-color: blue;
+  border: 1px solid rgb(0, 78, 196);
+}
+
+.frame {
+  display: flex;
+}
+
+.cancel-button {
+  background-color: white;
+  color: blue;
+  margin-right: 10px;
+  border: none;
+  border: 2px solid white;
+}
+
+.next-button {
+  background-color: rgb(32, 158, 255);
+  color: white;
+  border: none;
+  border: 2px solid white;
+}
+
+.cancel-button:hover,
+.next-button:hover {
+  border-color: rgb(92, 184, 255);
+}
+
+
+
+
+
+
+
+.upload-label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.upload-icon {
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:280px;
+  height: 120px;
+  border: 1px solid  #aeaeae;
+  /* background-color: #f5f8fa; */
+  pointer-events: none; /* Disable pointer events on the upload-icon */
+}
+
+.icon {
+  width: 278px;
+  height: 118px;
+}
+
+.input-container {
+  margin-top: 10px;
+}
+
+.dragged-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1; /* Set opacity to 1 for full visibility */
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.chosen-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
