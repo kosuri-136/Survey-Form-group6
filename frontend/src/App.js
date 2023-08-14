@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState,createContext  } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Signup from './Components/Signup/Signup';
+import Signin from './Components/Signin/Signin.js';
+import Surveylist from './Components/Surveylist/Surveylist';
+import CreateSurvey from './Components/Createsurvey/Createsurvey';
+import CreateQuestion from './Components/Createquestion/Createquestion';
+import Preview from './Components/Preview/Preview';
 
+export const Store = createContext();
 function App() {
+  const [token, setToken] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Store.Provider value={[ token, setToken ]}>
+
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Signin />} />
+        <Route path="/signup" element={<Signup/>} />
+        <Route path="/surveylist" element={<Surveylist />} />
+        <Route path="/createsurvey" element={<CreateSurvey />} />
+        <Route path="/createquestion" element={<CreateQuestion />} />
+        <Route path="/preview" element={<Preview />} />
+        
+      </Routes>
+    </Router>
+    </Store.Provider>
     </div>
   );
 }
+
 
 export default App;
