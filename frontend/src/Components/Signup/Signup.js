@@ -154,8 +154,8 @@ function Signup() {
                         </div>
                         <div className="checkbox">
                             <label className="checkbox-label">
-                                <input type="checkbox" className="checkbox-input" required/>
-                                I agree to Terms & Condition receiving  promotional materials
+                              <span><input type="checkbox" className="checkbox-input" required/></span>  
+                              <span className="checktext">I agree to Terms & Condition receiving  promotional materials</span>  
                             </label>
                         </div>
                     </div>
