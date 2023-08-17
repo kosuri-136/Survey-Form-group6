@@ -1,3 +1,5 @@
+
+
 .left{
     display: flex;
 
@@ -5,26 +7,25 @@
 .main-list{
     background-color: white;
     margin: 40px 0px  0px 10px;
+ width: 1700px;
 }
-
+/* 
 .Survey{
     display: flex;
     height: 89vh;
-}
+} */
+
+
 
 .list-page {
     background: #FAFDFF;
-    margin: -30px 20px 0px 50px;
-    width: 195vh;
+    margin: 0px 20px 0px 0px;
+    width: 1799px;
     height: 88vh;
     padding: 10px;
     overflow-y: auto;
   }
-  .foot {
-    margin-left: 50px;
-    position: fixed;
-    bottom: 0;
-}
+
   
   .list-page::-webkit-scrollbar {
     width: 8px;
@@ -32,7 +33,7 @@
   }
   
   .list-page::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: #ffffff;
     border-radius: 4px;
   }
   
@@ -49,13 +50,23 @@
   }
   
 /* Table Header */
+
 thead tr th {
 
   padding: 15px;
-  background-color: #e0e0e0;
+ 
   text-align: left;
+ 
+height: 65px;
+background-color: #F8FAFF 0% 0% no-repeat padding-box;
+
+opacity: 1;
   /* box-shadow: 0 12px 18px -6px #00000029; */
   /* column-span: none; */
+}
+
+thead {
+box-shadow:2px 3px 6px 0px #00000029;
 }
 
 /* Table Data */
@@ -65,8 +76,11 @@ thead tr th {
 
 /* Additional Styling (optional) */
 table {
-  border-collapse: collapse;
-  width: 100%;
+  /* border-collapse: collapse; */
+  width:1579px;
+  margin-bottom: 100px;
+  margin-left: 113px;
+  /* margin-right: 153px; */
 }
 
 tbody tr:nth-child(even) {
@@ -77,11 +91,40 @@ tbody tr:hover {
   background-color: #eaf6ff;
 }
 
+#falist{
+  margin-left: 1141px;
+  height: 49px;
+  width: 49px;
+}
+#fafill{
+margin-left: 35px;
+margin-right: 35px;
+}
 
-.list-page .search {
+.btnsave{
+  width: 127px;
+height: 50px;
+margin-top: -4px;
+background: #278DF1 0% 0% no-repeat padding-box;
+border-radius: 6px;
+border-color: #278DF1;
+opacity: 1;
+font: normal normal bold 14px/17px Helvetica Neue;
+font-weight: bold;
+letter-spacing: 0px;
+color: #FFFFFF;
+cursor: pointer;
+text-transform: uppercase;
+}
+
+ .search {
+  width: 1665px;
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  margin-top: 65px;
+  margin-left: 113px;
+  margin-bottom: 37px;
+  /* justify-content: space-between; */
+  /* padding: 20px; */
 }
 
 .list-page .search h2 {
@@ -90,49 +133,26 @@ tbody tr:hover {
   margin: 0;
 }
 
+
+
 .list-page .search h2 svg {
   margin-right: 10px;
   margin-left: 10px;
+  color: #888282;
 }
 
-.list-page .search .create {
-  display: flex;
-  align-items: center;
+
+.list-page .search button{
+  margin-left: 00px;
 }
 
-.list-page .search .create svg {
-  margin-right: 10px;
-}
-
-.list-page .search .save {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  background-color: #278DF1;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.list-page .search .save:hover {
-  background-color: #278DF1;
-}
 
 
 .frame{
+ width: 1660px;
     display: flex;
 }
 .edit{
     margin:0 10px ;
     cursor: pointer;
-}
-.save{
-    margin: 0 30px;
-    
-    padding: 10px 20px;
-    font-size: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid whitesmoke;
-    margin-right: 5px;
 }
