@@ -9,7 +9,7 @@ const Navcommon = () => {
   const navigate = useNavigate();
   
     const handleLogout = () => {
-    window.location.reload()
+    window.location.reload()  
   };
 
     // function to prevent acess to loginPages after LOGOUT
