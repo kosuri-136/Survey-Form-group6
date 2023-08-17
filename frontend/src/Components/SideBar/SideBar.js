@@ -27,23 +27,23 @@ function Sidebar() {
   return (
     <>
       <div className="sidebar">
-        <ul>
-          <li className={activeIcon === 'home' ? 'active' : ''} onClick={() => handleIconClick('home')}>
-            <div>
+      
+          <div id="home" className={activeIcon === 'home' ? 'active' : ''} onClick={() => handleIconClick('home')}>
+         
               <FontAwesomeIcon icon={faHouse} />
-            </div>
-          </li>
-          <li className={activeIcon === 'preview' ? 'active' : ''} onClick={() => handleIconClick('preview')}>
-            <div>
+          
+          </div>
+          <div id="preview" className={activeIcon === 'preview' ? 'active' : ''} onClick={() => handleIconClick('preview')}>
+           
               <FontAwesomeIcon icon={faUsers} />
-            </div>
-          </li>
-          <li className={activeIcon === 'list' ? 'active' : ''} onClick={() => handleIconClick('list')}>
-            <div>
+       
+          </div>
+          <div id='list' className={activeIcon === 'list' ? 'active' : ''} onClick={() => handleIconClick('list')}>
+         
               <FontAwesomeIcon icon={faTableList} />
-            </div>
-          </li>
-        </ul>
+          
+          </div>
+      
       </div>
     </>
   );
