@@ -5,9 +5,9 @@ import{  useContext } from 'react';
 import { Store } from '../../App';
 import axios from 'axios';
 import { message } from "antd";
-
 import './Signin.css'
-const REACT_APP_API_ENDPOINT='http://localhost:3003';
+// const REACT_APP_API_ENDPOINT='http://localhost:3003';
+const REACT_APP_API_ENDPOINT = 'https://ssss-nt7r.onrender.com';
 
 
 function Signin({ setIsAuthenticated }) {
@@ -44,14 +44,10 @@ function Signin({ setIsAuthenticated }) {
                 email,
                 password
             };
-
             
             const headers = {
               'x-token': token // Include the token here
             };
-        
-
-
             try{
               const res = await axios.post(`${REACT_APP_API_ENDPOINT}/signin`, loginData , { headers })
 
@@ -71,43 +67,61 @@ function Signin({ setIsAuthenticated }) {
     
     return (
         <div className="abc">
-            <div className='main-continer'>
-            <div className='heading1'>
-                <p className='text1'><b style={{"color":"black"}}>Survey Website</b><br /> "Right place to <br /> Create Survey" </p>
-                <p className='text2'>Sign in to continue access pages</p>
-                <p className='text3'>Don’t Have An Account?</p>
-                
-                <Link to="/signup">
-                <button className='register'>Register  </button></Link>
-            </div>
-            <div className='signin'>
-                <form>
-                    <h1 className='head'>Sign In </h1>
-                    <p className='text'>Sign in to continue access pages</p> {
-                    fail && <p className='text'>{fail}</p>
-                }
-                    <div className="form-group">
-                        {/* <label className="label" htmlFor="email">Email</label>
-                        <input type="email" id="email" className="input-field" required /> */}
-                          <label className="label" htmlFor="email">Email</label>
-                            <input type="email" id="email" className="input-field" value={email}
-                                onChange={(e) => setEmail(e.target.value)} required />{errors.email && <span>{errors.email}</span>}
+
+
+            <div className='Container'>
+          
+                    <div className='leftpartsignin'>        
+                        <span className='text1' > Welcome Page </span>
+                        <span className='text2'> One line text <br />  Will be here</span>
+                        <span className='text3'>Sign in to continue access pages</span>
+                        <span className='text4'>   Don’t Have An Account?</span>      
+                        <Link to="/signup"><button className='registerbtn'>Register  </button></Link>   
                     </div>
-                    <div className='form-group'>
-                        {/* <label htmlFor='Password'>Password</label>
-                        <input type='password' name='Password' required></input> */}
-                        <label className="label" htmlFor="pass">Password</label>
-                            <input type="password" id="pass" className="input-field" value={password}
-                                onChange={(e) => setPassword(e.target.value)} required />
-                            {errors.password && <span>{errors.password}</span>}
+
+
+
+                    <div className='signin'>
+                                    <form>
+                                        <h1 className='head'>Sign In </h1>
+                                        <p className='text'>Sign in to continue access pages</p> {
+                                        fail && <p className='text'>{fail}</p>
+                                        }
+                                    <div className="form-group">
+                                       
+                                        <label className="label1" htmlFor="email">Email</label>
+                                            <input type="email" id="email"  className="input-field1" value={email}
+                                                onChange={(e) => setEmail(e.target.value)} required />{errors.email && <span>{errors.email}</span>}
+                                    </div>
+
+
+                                        <hr />
+
+
+
+
+
+                                    <div className='form-group'>
+                                      
+                                        <label className="label2" htmlFor="pass">Password</label>
+                                            <input type="password"  id="pass" className="input-field2" value={password}
+                                                onChange={(e) => setPassword(e.target.value)} required />
+                                            {errors.password && <span>{errors.password}</span>}
+                                    </div>
+                                    <hr />
+                                    <div >
+                                        <button className='signinbtn' onClick={handleSubmit}>Sign in</button>
+                                    </div>
+                                  
+                                    </form>
                     </div>
-                    <div className='btn'>
-                        <button  onClick={handleSubmit}>Sign in</button>
-                    </div>
-                </form>
-            </div>
+
+
+
+
+             </div>
         </div>
-        </div>
+       
     )
 }
 
