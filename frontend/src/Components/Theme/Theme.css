@@ -1,157 +1,374 @@
 
 .main{
-    background-color: rgba(239, 240, 240, 0.71);
-    height: 100%;
-    width: 100%;
-    position:absolute;
-    margin: 20px;
-    top: 0;
-    left: 0;
-    
-  }
-  .main h3{
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  label{
-    color: blue;
-  }
-  .popup{
-    height: 80%;
-    width: 45%;
-    background-color: white;
-    position: absolute;
-    top: 10%;
-    right: 27%;
-    border: 1px solid #707070;
-    border-radius: 3%;
-    color: #2D2D2E;
-    font-family: sans-serif;
-    font-weight: normal;
-  }
-  .popup-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px 0 30px;
-    border-bottom: 2px solid #CCCCCC;
-    color: #676767;
-    font-family:Helvetica;
-    font-weight: bold;
+  background-color: rgba(239, 240, 240, 0.71);
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  margin: 20px;
+  top: 0;
+  left: 0;
   
-  }
-  .popup-body{
-    padding: 0 30px 0 30px;
-    text-align: left;
-  }
-  .cursor-pointer{
-    cursor: pointer;
-  }
-  .formPart{
-    border-bottom: 1px solid #CCCCCC;
-    color: #676767;
-    font-size: small;
-    padding: 10px 30px;
-  }
+}
+.main h3{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 187px;
+  height: 29px;
+  text-align: left;
+  font: normal normal bold 25px/30px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #676767;
+  opacity: 1;
+}
+label{
+  color: blue;
+}
+.popup{
+  height:682px;
+  width: 1072px;
+  background-color: white;
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  border: 1px solid #707070;
+  border-radius: 3%;
+  color: #2D2D2E;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+.popup-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  border-bottom: 2px solid #CCCCCC;
+  color: #676767;
+  font-family:Helvetica;
+  font-weight: bold;
+
+}
+.popup-body{
+  padding: 0 30px 0 30px;
+  text-align: left;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.formPart{
+  border-bottom: 1px solid #CCCCCC;
+  color: #676767;
+  font-size: small;
+  padding: 10px 30px;
+}
+
+.themeOpt{
+  margin-top: 10px;
+  width: 52px;
+height: 22px;
+text-align: left;
+font: normal normal normal 16px/22px Open Sans;
+letter-spacing: 0.16px;
+color: #2D2D2E;
+opacity: 1;
  
-  #themeOpt{
-    font-size: smaller;
-    color: #676767;
-    padding: 1px 2px;
-    width: 50%;
-    border: 1px solid #CCCCCC;
-    padding-top: 2px;
-   
-  }
-  .formPart2{
-    padding: 0 30px 20px 30px;
-    border-bottom: 1px solid #CCCCCC;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .formPart2 div{
-    display: inline-block;
-    min-width: 30%;
-    color: #676767;
-    font-size: small;
-    padding: 10px 0 0 0;
-  }
-  .formPart2 div select , .formPart2 div input{
-    font-size: smaller;
-    color: #676767;
-    padding: 1px 2px;
-    width: 100%;
-    border: 1px solid #CCCCCC;
-  }
-  .formPart2 input{
-   margin-left: 10px;
-  }
-  .formPart3{
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    color: #676767;
-    font-size: small;
-    padding: 0px 30px;
-  }
-  .formPart3 div{
-    display: inline-block;
-    min-width: 30%;
-    color: #676767;
-    font-size: small;
-    padding: 10px 0 0 0;
-    margin-right: 20px;
-  }
-  .formPart3 div select{
-    font-size: smaller;
-    color: #676767;
-    padding: 1px 2px;
-    width: 100%;
-    border: 1px solid #CCCCCC;
-  }
-  .my-btn{
-    position: absolute;
-    bottom: 20px;
-    border-top: 2px solid #CCCCCC;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
+}
 
-  }
+#themeOpt{
+margin-top: 12px;
+margin-bottom: 30px;
 
-  .cancelBtn , .saveBtn{
-    color: #7a7a7a;
-    background-color: #FFFFFF;
-    border: 1px solid #676767;
-    border-radius: 6px;
-    padding: 5px 15px;
-    margin-right: 5px;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-  .saveBtn{
-    background-color: #278DF1;
-    color: #FFFFFF;
-  }
+width: 534px;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+opacity: 1;
+}
+
+.themeName{
+width: 106px;
+height: 22px;
+text-align: left;
+font: normal normal normal 16px/22px Open Sans;
+letter-spacing: 0.16px;
+color: #2D2D2E;
+opacity: 1;
+}
+#themeName{
+width: 287px;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+opacity: 1;
+}
+
+.themeType{
+width: 106px;
+height: 22px;
+text-align: left;
+font: normal normal normal 16px/22px Open Sans;
+letter-spacing: 0.16px;
+color: #2D2D2E;
+opacity: 1;
+}
+
+#themeType{
+width: 287px;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+opacity: 1;
+}
+
+
+#fromType{
+width: 287px;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+opacity: 1;
+}
+
+.fromType{
+width: 106px;
+height: 22px;
+text-align: left;
+font: normal normal normal 16px/22px Open Sans;
+letter-spacing: 0.16px;
+color: #2D2D2E;
+opacity: 1;
+}
+
+#allQuestionMandatory{
+width: 287px;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+opacity: 1;
+}
+.allQuestionMandatory{
+width: 106px;
+height: 22px;
+text-align: left;
+font: normal normal normal 16px/22px Open Sans;
+letter-spacing: 0.16px;
+color: #2D2D2E;
+opacity: 1;
+}
+
+
+#enableSkip{
+width: 287px;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+opacity: 1;
+}
+.enableSkip{
+width: 106px;
+height: 22px;
+text-align: left;
+font: normal normal normal 16px/22px Open Sans;
+letter-spacing: 0.16px;
+color: #2D2D2E;
+opacity: 1;
+}
+
+.optionType{
+width: 106px;
+height: 22px;
+text-align: left;
+font: normal normal normal 16px/22px Open Sans;
+letter-spacing: 0.16px;
+color: #2D2D2E;
+opacity: 1;
+}
+
+#optionType{
+width: 287px;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+opacity: 1;
+}
+
+
+#font{
+width: 287px;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+opacity: 1;
+}
+.font{
+width: 106px;
+height: 22px;
+text-align: left;
+font: normal normal normal 16px/22px Open Sans;
+letter-spacing: 0.16px;
+color: #2D2D2E;
+opacity: 1;
+}
+
+
+#colorth{
+width: 287px;
+height: 40px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #CCCCCC;
+border-radius: 4px;
+opacity: 1;
+}
+.colorth{
+width: 106px;
+height: 22px;
+text-align: left;
+font: normal normal normal 16px/22px Open Sans;
+letter-spacing: 0.16px;
+color: #2D2D2E;
+opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+.formPart2{
+  padding: 0 30px 20px 30px;
+  border-bottom: 1px solid #CCCCCC;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.formPart2 div{
+  display: inline-block;
+  min-width: 30%;
+  color: #676767;
+  font-size: small;
+  padding: 10px 0 0 0;
+}
+.formPart2 div select , .formPart2 div input{
+  font-size: smaller;
+  color: #676767;
+  padding: 1px 2px;
+  width: 100%;
+  border: 1px solid #CCCCCC;
+}
+.formPart2 input{
+ margin-left: 10px;
+}
+.formPart3{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  color: #676767;
+  font-size: small;
+  padding: 0px 30px;
+}
+.formPart3 div{
+  display: inline-block;
+  min-width: 30%;
+  color: #676767;
+  font-size: small;
+  padding: 10px 0 0 0;
+  margin-right: 20px;
+  height: 50%;
+}
+.formPart3 div select{
+  font-size: smaller;
+  color: #676767;
+  padding: 1px 2px;
+  width: 100%;
+  border: 1px solid #CCCCCC;
+}
+.my-btn{
+  position: absolute;
+  bottom: 20px;
+  border-top: 2px solid #CCCCCC;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.saveBtn{
+  margin-top: 10px;
+  width: 150px;
+height: 60px;
+background: #278DF1 0% 0% no-repeat padding-box;
+border-radius: 6px;
+opacity: 1;
+text-align: center;
+font: normal normal bold 16px/19px Helvetica Neue;
+letter-spacing: 0px;
+color: #FFFFFF;
+text-transform: uppercase;
+opacity: 1;
+}
+.cancelBtn{
+margin-top: 10px;
+width: 150px;
+height: 60px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #707070;
+border-radius: 6px;
+opacity: 1;
+text-align: center;
+font: normal normal bold 16px/19px Helvetica Neue;
+letter-spacing: 0px;
+color: #6A6A6A;
+text-transform: uppercase;
+opacity: 1;
+margin-right: 10px;
+}
+
+
+
+
+
+
+
 .theme-btn{
-    background-color: #8A5DEF;
-    margin-right: 10px;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid whitesmoke;
+background: #8A5DEF 0% 0% no-repeat padding-box;
+  border: 2px solid #8A5DEF;
+  border-radius: 4px;
+  width: 163px;
+height: 46px;
+  opacity: 1;
+  margin-right: 10px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid whitesmoke;
+  text-align: center;
+  font: normal normal bold 15px/20px Open Sans;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
+  opacity: 1;
 }
 input{
-  background: white;
-  height: 20px;
-  border-radius: 9px;
+background: white;
+height: 20px;
+border-radius: 9px;
 }
 select{
-  height: 20px;
-  border-radius: 9px;
+height: 20px;
+border-radius: 9px;
 }
