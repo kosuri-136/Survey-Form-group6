@@ -8,8 +8,8 @@ import Image1 from "../image.png"; //
 import { message } from "antd";
 
 
-// const REACT_APP_API_ENDPOINT = 'https://ssss-nt7r.onrender.com';
-const REACT_APP_API_ENDPOINT='http://localhost:3003'
+const REACT_APP_API_ENDPOINT = 'https://ssss-nt7r.onrender.com';
+// const REACT_APP_API_ENDPOINT='http://localhost:3003'
 
 
 const CreateSurvey = () => {
