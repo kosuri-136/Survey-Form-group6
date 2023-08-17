@@ -14,7 +14,8 @@ import "../Surveylist/Surveylist.css";
 import Sidebar from "../SideBar/SideBar";
 import Navcommon from "../Navbar/Navbar";
 
-const REACT_APP_API_ENDPOINT = "http://localhost:3003";
+ const REACT_APP_API_ENDPOINT = "http://localhost:3003";
+//const REACT_APP_API_ENDPOINT = 'https://ssss-nt7r.onrender.com';
 
 const Surveylist = () => {
   const email = localStorage.getItem("email");
@@ -78,9 +79,25 @@ const Surveylist = () => {
 
 
 
-
-
-
+    useEffect(() => {
+      // Check for authentication before rendering the page
+      if (!token) {
+        navigate('/');
+      } else {
+        // Fetch user-specific surveys
+        axios.get(`${REACT_APP_API_ENDPOINT}/surveys/${localStorage.getItem('email')}`, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+        .then(response => {
+          setSurveys(response.data.result);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+      }
+    }, [token]);
 
 
 
@@ -152,23 +169,39 @@ const Surveylist = () => {
       <div className="frame">
         <Sidebar />
         <div className="main-list">
-          <div className="Survey">
+     
             <div className="list-page">
+
+
+
               <div className="search">
-                <div>
-                  <h2>
-                    Survey List <FontAwesomeIcon icon={faSearch} />{" "}
-                  </h2>
-                </div>
-                <div className="create">
-            
-                  <FontAwesomeIcon icon={faList} />
-                  <FontAwesomeIcon icon={faFilter} />
-                  <button className="save" onClick={handleSaveNewSurvey}>
-                    Create
-                  </button>
-                </div>
+                    
+                              <h2>
+                                Survey List <FontAwesomeIcon icon={faSearch} />{" "}
+                              </h2>
+                      
+
+                     <div>      
+                                <span id="falist">  <FontAwesomeIcon icon={faList} style={{"height":"29px", "width":'29px'}}/></span>
+                                <span id="fafill"><FontAwesomeIcon icon={faFilter} style={{"height":"29px", "width":'29px'}}/></span>
+                    </div>
+                               
+                        <div>
+                                <button className="btnsave" onClick={handleSaveNewSurvey}>
+                                <b> CREATE</b>
+                                </button>
+                        </div>
+                     
               </div>
+
+
+
+
+
+
+
+
+
               <table>
                 <thead>
                   <tr>
@@ -270,10 +303,8 @@ const Surveylist = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="foot">
+
       
-      </div>
     </>
   );
 };
