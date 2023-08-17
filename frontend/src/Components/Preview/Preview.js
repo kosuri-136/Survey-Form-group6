@@ -1,7 +1,6 @@
 import React, { useEffect, useState , useContext} from "react";
 import { useNavigate } from 'react-router-dom';
 import "./Preview.css";
-// import PrevQues from "./PrevQues";
 import Sidebar from "../SideBar/SideBar";
 import Navcommon from "../Navbar/Navbar";
 import { Store } from '../../App';
@@ -10,8 +9,8 @@ import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
-const REACT_APP_API_ENDPOINT='http://localhost:3003'
-
+ const REACT_APP_API_ENDPOINT='http://localhost:3003'
+//const REACT_APP_API_ENDPOINT = 'https://ssss-nt7r.onrender.com';
 function Preview() {
   const navigate = useNavigate()
   const [token] = useContext(Store); 
