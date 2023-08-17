@@ -6,12 +6,11 @@ import Image from "../profile-pic.jpg";
 import { useNavigate } from 'react-router-dom';
 const Navcommon = () => {
   const [showLogoutMenu, setShowLogoutMenu] = useState(false);
-  const [flag, setFlag] = [false]
+  const [flag, setFlag] = useState(false)
   const navigate = useNavigate();
   
   const handleLogout = () => {
          setFlag(true)
-        localStorage.clear()
         navigate("/");
   };
 
