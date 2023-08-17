@@ -13,6 +13,8 @@ import { faCog } from '@fortawesome/free-solid-svg-icons';
 
 const REACT_APP_API_ENDPOINT = 'http://localhost:3003';
 
+// const REACT_APP_API_ENDPOINT = 'https://ssss-nt7r.onrender.com';
+
 const CreateQuestion = () => {
   const email = localStorage.getItem('email');
   const surveyId = localStorage.getItem('id');
@@ -70,13 +72,13 @@ const CreateQuestion = () => {
       { questionText, options: [...option] },
     ]);
     setQuestionText('');
-    setOption(['Option1', 'Option2', 'Option3']);
+    setOption(['Option 1', 'Option 2', 'Option 3']);
 
     localStorage.setItem('questionsData', JSON.stringify(questionsData));
   };
 
   const handleAddOption = () => {
-    let newOption = `Option${option.length + 1}`;
+    let newOption = `Option ${option.length + 1}`;
     setOption([...option, newOption]);
   };
 
@@ -226,7 +228,7 @@ const CreateQuestion = () => {
                 <label>
                   <input
                     type="radio"
-                    name={`Option${index}`}
+                    name={`Option ${index}`}
                     value={opt}
                     checked={selectedOptions[questionsData.length] === opt}
                     onChange={() => handleOptionSelect(questionsData.length, opt)}
