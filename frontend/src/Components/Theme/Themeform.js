@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { message } from "antd";
 
-const REACT_APP_API_ENDPOINT='http://localhost:3003'
+// const REACT_APP_API_ENDPOINT='http://localhost:3003'
+const REACT_APP_API_ENDPOINT = 'https://ssss-nt7r.onrender.com';
 
 
 function MyForm({ closePopup }) {
@@ -78,7 +79,7 @@ fetch(`${REACT_APP_API_ENDPOINT}/themes`, {
   return (
     <form onSubmit={handleSubmit}>
       <div className="formPart">
-        <label htmlFor="themeOpt">Theme</label>
+        <label className='themeOpt' htmlFor="themeOpt">Theme</label>
       
         <select
           id="themeOpt"
@@ -94,7 +95,7 @@ fetch(`${REACT_APP_API_ENDPOINT}/themes`, {
       </div>
       <div className="formPart2">
         <div>
-          <label htmlFor="themeName">Theme Name</label>
+          <label className='themeName' htmlFor="themeName">Theme Name</label>
     
           <input
             type="text"
@@ -106,7 +107,7 @@ fetch(`${REACT_APP_API_ENDPOINT}/themes`, {
           />
         </div>
         <div>
-          <label htmlFor="themeType">Theme Type</label>
+          <label className='themeType' htmlFor="themeType">Theme Type</label>
         
           <select
             id="themeType"
@@ -120,7 +121,7 @@ fetch(`${REACT_APP_API_ENDPOINT}/themes`, {
           </select>
         </div>
         <div>
-          <label htmlFor="fromType">From Type</label>
+          <label className='fromType' htmlFor="fromType">From Type</label>
         
           <select
             id="fromType"
@@ -134,7 +135,7 @@ fetch(`${REACT_APP_API_ENDPOINT}/themes`, {
           </select>
         </div>
         <div>
-          <label htmlFor="allQuestionMandatory">All Question mandatory</label>
+          <label className='allQuestionMandatory' htmlFor="allQuestionMandatory">All Question mandatory</label>
          
           <select
             id="allQuestionMandatory"
@@ -149,7 +150,7 @@ fetch(`${REACT_APP_API_ENDPOINT}/themes`, {
           </select>
         </div>
         <div>
-          <label htmlFor="enableSkip">Enable Skip</label>
+          <label className='enableSkip' htmlFor="enableSkip">Enable Skip</label>
         
           <select
             id="enableSkip"
@@ -164,7 +165,7 @@ fetch(`${REACT_APP_API_ENDPOINT}/themes`, {
           </select>
         </div>
         <div>
-          <label htmlFor="optionType">Option Type</label>
+          <label className='optionType' htmlFor="optionType">Option Type</label>
         
           <select
             id="optionType"
@@ -181,7 +182,7 @@ fetch(`${REACT_APP_API_ENDPOINT}/themes`, {
       </div>
       <div className="formPart3">
         <div>
-          <label htmlFor="font">Font</label>
+          <label className='font' htmlFor="font">Font</label>
        
           <select
             id="font"
@@ -197,10 +198,10 @@ fetch(`${REACT_APP_API_ENDPOINT}/themes`, {
           </select>
         </div>
         <div>
-          <label htmlFor="color">Color</label>
+          <label className='colorth' htmlFor="color">Color</label>
        
           <select
-            id="color"
+            id="colorth"
             name="color"
             value={themeData.color}
             onChange={handleInputChange}
