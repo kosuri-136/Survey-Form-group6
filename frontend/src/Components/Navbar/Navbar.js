@@ -2,18 +2,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"; // You can create a CSS file for styling
-import Image from "../profile-pic.jpg"; // 
+import Image from "../profile-pic.jpg"; 
 import { useNavigate } from 'react-router-dom';
 const Navcommon = () => {
   const [showLogoutMenu, setShowLogoutMenu] = useState(false);
   const navigate = useNavigate();
   const handleLogout = () => {
    
-    
         localStorage.clear()
         navigate("/");
-    
   };
+
+    // function to prevent acess to loginPages after LOGOUT
+    window.addEventListener('popstate', function(event) { 
+    navigate("/");
+  });
+
 
   return (
     <nav className="navbar">
