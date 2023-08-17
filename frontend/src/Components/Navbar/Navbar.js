@@ -14,7 +14,7 @@ const Navcommon = () => {
   const handleLogout = () => {
         localStorage.clear()
         setToken(null)
-        navigate("/");s
+        navigate("/");
   };
 
   return (
