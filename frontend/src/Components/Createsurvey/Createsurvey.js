@@ -8,6 +8,7 @@ import Image1 from "../image.png"; //
 import { message } from "antd";
 
 
+//const REACT_APP_API_ENDPOINT = 'https://ssss-nt7r.onrender.com';
 const REACT_APP_API_ENDPOINT='http://localhost:3003'
 
 
@@ -121,10 +122,10 @@ const CreateSurvey = () => {
         <div className="form-container">
           <div className="left-side">
           <div className="form-field">
-  <label htmlFor="name">Name:</label>
+  <label className='labelnamee' htmlFor="name">Name</label>
   <input
     type="text"
-    id="name"
+    id="namee"
     value={name}
     onChange={(e) => setName(e.target.value)}
     placeholder="Survey Name"
@@ -134,7 +135,7 @@ const CreateSurvey = () => {
 
 
             <div className="form-field">
-              <label htmlFor="description">Description:</label>
+              <label className='labeldescription' htmlFor="description">Description</label>
               <input
                 id="description"
                 value={description}
@@ -145,7 +146,7 @@ const CreateSurvey = () => {
             </div>
 
             <div className="form-field">
-              <label htmlFor="surveyType">Survey Type:</label>
+              <label className='labelsurveyType' htmlFor="surveyType">Survey Type:</label>
               <select
                 id="surveyType"
                 value={surveyType}
@@ -162,8 +163,13 @@ const CreateSurvey = () => {
           </div>
 
           <div className="right-side">
+
+
+          <div className='dateflex'>
+
+
             <div className="form-field">
-              <label htmlFor="startDate">Start Date:</label>
+              <label className='startdate' htmlFor="startDate">Start Date:</label>
               <input
                 type="date"
                 id="startDate"
@@ -174,7 +180,7 @@ const CreateSurvey = () => {
             </div>
 
             <div className="form-field">
-              <label htmlFor="endDate">End Date:</label>
+              <label className='enddate' htmlFor="endDate">End Date:</label>
               <input
                 type="date"
                 id="endDate"
@@ -184,8 +190,15 @@ const CreateSurvey = () => {
               />
             </div>
 
+
+            </div>
+
+
+
+
+
             <div className="form-field">
-              <label htmlFor="criteria">Other Criteria:</label>
+              <label className='criteria' htmlFor="criteria">Other Criteria:</label>
               <input
                 id="criteria"
                 value={criteria}
@@ -210,7 +223,7 @@ const CreateSurvey = () => {
       className="chosen-image"
     />
   )} */}
-<label htmlFor="image" className="upload-label" onDrop={handleImageDrop} onDragOver={handleDragOver}>Upload Image
+<label  htmlFor="image" className="upload-label" onDrop={handleImageDrop} onDragOver={handleDragOver}>Upload Image
   {image && (
     <img
       src={URL.createObjectURL(image)}
@@ -220,6 +233,7 @@ const CreateSurvey = () => {
   )}
   <div className="upload-icon">
     <img src={Image1} alt="Upload Icon" className="icon" />
+
     {/* <p>Drag & Drop</p> */}
   </div>
 </label>
