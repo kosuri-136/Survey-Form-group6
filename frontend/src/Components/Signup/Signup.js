@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import "./Signup.css";
 import { message } from "antd";
-// import "../Signin/Signin.css"
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 const REACT_APP_API_ENDPOINT='http://localhost:3003'
+//const REACT_APP_API_ENDPOINT = 'https://ssss-nt7r.onrender.com';
 
 
 function Signup() {
@@ -99,15 +99,22 @@ function Signup() {
     
     return (
         <div className="abc">
-            <div className="main-continer">
-            <div className="heading1">
-            <p className='text1'><b style={{"color":"black"}}>Survey Website</b><br /> "Right place to <br /> Create Survey" </p>
-                <p className="text2">Sign in to continue access pages</p>
-                <p className="text3">Don’t Have An Account?</p>
-                
-                <Link to="/">
-                <button className="register">Sign In </button></Link>
-            </div>
+         
+         <div className='Container'>
+          
+          <div className='leftpart'>        
+              <span className='text1' >Welcome Page</span>
+              <span className='text2'> One line text <br />  Will be here</span>
+              <span className='text3'>Sign in to continue access pages</span>
+              <span className='text4'>Alread Have An Account</span>      
+              <Link to="/"><button className='signinbtn'>Sign In</button></Link>   
+          </div>
+
+
+
+
+
+
             <div className="Register">
                 <form onSubmit={handleSubmit}>
                     <h1 className="head">Register </h1>
@@ -115,59 +122,80 @@ function Signup() {
                     {
                     fail && <p>{fail}</p>
                 }
-                    <div className="rows">
-                        <div className="form-flex">
-                            <label className="label" htmlFor="name" >Name</label>
+                 
+                         <div className="column">
+
+                            <div className="row1">
+                       <div>
+                            <label className="labelname" htmlFor="name" >Name</label>
                             <input type="text" id="name" className="input-field" value={name}
                                     onChange={(e) => setName(e.target.value)} required />
                                 {errors.name && <span>{errors.name}</span>}
-                        </div>
-                        <div className="form-flex">
-                            <label className="label" htmlFor="email">Email</label>
-                            <input type="email" id="email" className="input-field" value={email}
+                                </div>
+                        <hr />
+                        <div>
+                            <label className="labelemail" htmlFor="email">Email</label>
+                            <input type="email" id="emailup" className="input-field" value={email}
                                 onChange={(e) => setEmail(e.target.value)} required />{errors.email && <span>{errors.email}</span>}
                         </div>
-                        <div className="form-flex">
-                            <label className="label" htmlFor="number">Phone number</label>
+                        <hr />
+                        <div>
+                            <label className="labelnumber" htmlFor="number">Phone number</label>
                             <input type="number" id="number" className="input-field" value={phoneNumber}
                                     onChange={(e) => setPhoneNumber(e.target.value)} required />
                                 {errors.phoneNumber && <span>{errors.phoneNumber}</span>}
-                        </div>
-                        <div className="form-flex">
-                            <label className="label" htmlFor="pro">Profession</label>
+                                </div>
+                                <hr />
+                                </div>
+                      
+                        <div>
+                        <div className="row2">
+                            <label className="labelprofession" htmlFor="pro">Profession</label>
                             <input type="Text" id="pro" className="input-field" value={profession}
                                     onChange={(e) => setProfession(e.target.value)} required />
                                 {errors.profession && <span>{errors.profession}</span>}
-                        </div>
-                        <div className="form-flex">
-                            <label className="label" htmlFor="pass">Password</label>
-                            <input type="password" id="pass" className="input-field" value={password}
+                                </div>
+                        <hr className="hr" />
+                        <div>
+                            <label className="labelpassword" htmlFor="pass">Password</label>
+                            <input type="password" id="passup" className="input-field" value={password}
                                 onChange={(e) => setPassword(e.target.value)} required />
                             {errors.password && <span>{errors.password}</span>}
-
-                        </div>
-                        <div className="form-flex">
-                            <label className="label" htmlFor="confirmPassword"> Confirm Password</label>
+                            </div>
+                      
+                        <hr className="hr" />
+                        <div>
+                            <label className="labelcpassword" htmlFor="confirmPassword"> Confirm Password</label>
                             <input type="password" id="confirmPassword" className="input-field" value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)} required />
                                 {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
+                                </div>
+                        <hr className="hr"/>
                         </div>
-                        <div className="checkbox">
-                            <label className="checkbox-label">
-                              <span><input type="checkbox" className="checkbox-input" required/></span>  
-                              <span className="checktext">I agree to Terms & Condition receiving  promotional materials</span>  
-                            </label>
                         </div>
-                    </div>
-                    <div className="btn1">
-                        <button>Register</button>
+
+                       
+                                <label className="checkbox-label">
+                                <span><input type="checkbox" className="checkbox-input" required/></span>  
+                                <span className="checktext">I agree to Terms & Condition receiving  promotional materials</span>  
+                                </label>
+                         
+                    <div>
+                        <button  className="btn1">Register</button>
                         
                     </div>
+                   
+                    
+
                 </form>
-                
+              
+                </div>
             </div>
-        </div>
-        </div>
+
+            </div>
+    
+            
+        
     );
 }
 
